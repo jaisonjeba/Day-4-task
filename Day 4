@@ -1,0 +1,86 @@
+1. Create your resume data in JSON format
+
+var resume = {
+"Name": "Jaison",
+"Date of Birth": "23/11/1997",
+"Mail ID": "jaison@yahoo.com",
+"Contact Number": "8756987456",
+"Address": "58/7, Anna Salai, Karaikdui",
+"Pincode": "659786",
+"Skills": "JavaScript, HTML",
+"Qualification": "B.E., MBA.,"
+}
+for (var a in resume){
+console.log(a, resume[a]);
+}
+
+2. For the above JSON, iterate over all for loops (for, for in, for of, forEach)
+
+for loop:
+
+var Subject = {
+  Subject1: "Tamil",
+  Subject2: "English",
+  Subject3: "Maths",
+  Subject4: "Science",
+  Subject5: "Social"
+};
+
+var keys = Object.keys(Subject);
+
+for (var i = 0; i < keys.length; i++) {
+  var key = keys[i];
+  console.log(key, Subject[key]);
+}
+
+for in:
+
+var Subject = {
+Subject1: "Tamil",
+Subject2: "English",
+Subject3: "Maths",
+Subject4: "Science",
+Subject5: "Social"
+}
+for (var a in Subject){
+console.log(a, Subject[a]);
+}
+
+for of:
+
+var Subject = {
+    Subject1: "Tamil",
+    Subject2: "English",
+    Subject3: "Maths",
+    Subject4: "Science",
+    Subject5: "Social"
+};
+
+var keys = Object.keys(Subject); 
+
+for (const [index, key] of keys.entries()) { 
+    console.log(key, Subject[key]); 
+}
+
+forEach:
+
+var Subject = {
+    Subject1: "Tamil",
+    Subject2: "English",
+    Subject3: "Maths",
+    Subject4: "Science",
+    Subject5: "Social"
+};
+
+var entries = [];
+for (var key in Subject) {
+    if (Subject.hasOwnProperty(key)) { 
+        entries.push([key, Subject[key]]);
+    }
+}
+
+entries.forEach(function(entry) { 
+    var key = entry[0]; 
+    var value = entry[1]; 
+    console.log(key, value); 
+});
